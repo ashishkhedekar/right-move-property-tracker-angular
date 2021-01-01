@@ -1,0 +1,10 @@
+:host .location-card {
+  background: #558B2F;
+  color: #fff;
+}
+:host .location-card.increase {
+  background: #558B2F;
+  color: #fff;
+}
+:host .location-card.decrease { background: #C62828; color: #fff;
+}

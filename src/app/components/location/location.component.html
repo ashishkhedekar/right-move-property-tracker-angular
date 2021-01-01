@@ -1,0 +1,23 @@
+<div class="mdl-card location-card mdl-shadow--2dp"  style="width: 100%;">
+
+  <span>
+    <div class="mdl-card__title">
+      <a [routerLink]="['location-details', location?.locationIdentifier]" >
+        <h2 style="color: #fff; margin: 0">
+          {{location?.locationName}}
+        </h2>
+      </a>
+    </div>
+    <div class="mdl-card__title">
+      <h4 style="color: #fff; margin: 0">
+        Number of Let Properties {{location?.numberOfLetProperties}}
+      </h4>
+    </div>
+    <div class="mdl-card__title">
+      <h4 style="color: #fff; margin: 0">
+        Number of Sold Properties {{location?.numberOfSoldProperties}}
+      </h4>
+    </div>
+  </span>
+
+</div>

@@ -1,0 +1,6 @@
+<main class="mdl-layout__content" style="padding: 20px;" *ngIf="locations">
+  <div *ngFor='let location of locations'>
+    <app-location [location]="location"></app-location>
+  </div>
+</main>
+
