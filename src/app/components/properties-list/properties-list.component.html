@@ -20,6 +20,16 @@
     <td mat-cell *matCellDef="let element"> {{element.firstVisibleDate}} </td>
   </ng-container>
 
+  <ng-container matColumnDef="offMarketDate">
+    <th mat-header-cell *matHeaderCellDef> Off Market Date </th>
+    <td mat-cell *matCellDef="let element"> {{element.offMarketDate}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="daysOnMarket">
+    <th mat-header-cell *matHeaderCellDef> Days On Market </th>
+    <td mat-cell *matCellDef="let element"> {{element.daysOnMarket}} </td>
+  </ng-container>
+
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>

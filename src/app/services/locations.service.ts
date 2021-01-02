@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-
-const service = 'http://localhost:8080/market-summary';
+import { environment } from '../../environments/environment';
 
 export interface LocationInterface {
   locationIdentifier: string;
@@ -26,11 +25,12 @@ export class LocationsService {
   constructor(private http: HttpClient) { }
 
   load() {
-    return this.http.get<Array<LocationInterface>>(service);
+    return this.http.get<Array<LocationInterface>>(`${environment.backendEndpoint}/market-summary`);
   }
 
   loadLocationMarketDetails(locationIdentifier) {
-    return this.http.get<Array<LocationDetailsInterface>>('http://localhost:8080/market-details?locationIdentifier='+locationIdentifier);
+    console.log(`Calling endpoing at ${environment.backendEndpoint}/market-details?locationIdentifier=${locationIdentifier}`);
+    return this.http.get<Array<LocationDetailsInterface>>(`${environment.backendEndpoint}/market-details?locationIdentifier=${locationIdentifier}`);
   }
 
 }
