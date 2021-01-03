@@ -15,6 +15,7 @@ export interface LocationDetailsInterface {
   firstVisibleDate: string;
   channel: string;
   mainMapImageSrc: string;
+  bedrooms: number;
 }
 
 @Injectable({
@@ -29,7 +30,6 @@ export class LocationsService {
   }
 
   loadLocationMarketDetails(locationIdentifier) {
-    console.log(`Calling endpoing at ${environment.backendEndpoint}/market-details?locationIdentifier=${locationIdentifier}`);
     return this.http.get<Array<LocationDetailsInterface>>(`${environment.backendEndpoint}/market-details?locationIdentifier=${locationIdentifier}`);
   }
 

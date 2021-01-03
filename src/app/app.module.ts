@@ -12,6 +12,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatChipsModule} from '@angular/material/chips';
 import { PropertiesListComponent } from './components/properties-list/properties-list.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatSortModule} from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -21,15 +22,16 @@ import {MatTabsModule} from '@angular/material/tabs';
     DashboardComponent,
     PropertiesListComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatTableModule,
-    MatChipsModule,
-    MatTabsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MatTableModule,
+        MatChipsModule,
+        MatTabsModule,
+        MatSortModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
