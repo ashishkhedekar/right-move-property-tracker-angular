@@ -3,7 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import { environment } from '../../environments/environment';
 
 export interface LocationInterface {
-  locationIdentifier: string;
+  locationId: string;
   locationName: string;
   numberOfLetProperties: number;
   numberOfSoldProperties: number;
@@ -29,8 +29,8 @@ export class LocationsService {
     return this.http.get<Array<LocationInterface>>(`${environment.backendEndpoint}/market-summary`);
   }
 
-  loadLocationMarketDetails(locationIdentifier) {
-    return this.http.get<Array<LocationDetailsInterface>>(`${environment.backendEndpoint}/market-details?locationIdentifier=${locationIdentifier}`);
+  loadLocationMarketDetails(locationId) {
+    return this.http.get<Array<LocationDetailsInterface>>(`${environment.backendEndpoint}/market-details?locationId=${locationId}`);
   }
 
 }
