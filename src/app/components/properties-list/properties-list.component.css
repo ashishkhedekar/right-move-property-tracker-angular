@@ -1,13 +1,40 @@
-table {
+.property-cards-container {
   width: 100%;
-}
-
-.property-details {
-  margin: 0;
   display: flex;
+  height: auto;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-p {
-  border: 1px solid red;
+.property-card {
+  border: 1px solid black;
+  margin: 10px;
+  position: relative;
+  height: 325px;
+  width: 15%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
+.image-container {
+  position: absolute;
+
+}
+
+.image-container img {
+  width: 90%;
+  padding: 10px;
+
+}
+
+.description-container {
+  position: absolute;
+  top: 175px;
+  margin: 10px;
+  width: 100%;
+
+}
