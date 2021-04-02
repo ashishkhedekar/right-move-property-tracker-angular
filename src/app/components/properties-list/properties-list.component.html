@@ -1,40 +1,13 @@
-<table mat-table [dataSource]="propertiesDataSource" matSort class="mat-elevation-z8" *ngIf="propertiesDataSource">
-  <!-- Position Column -->
-  <ng-container matColumnDef="mainMapImageSrc">
-    <th mat-header-cell *matHeaderCellDef> Property </th>
-    <td mat-cell *matCellDef="let element"> <img [src]="element.mainMapImageSrc"></td>
-  </ng-container>
+<div *ngFor="let property of properties" class="property-details">
 
-  <ng-container matColumnDef="displayPrice">
-    <th mat-header-cell *matHeaderCellDef> Display Price </th>
-    <td mat-cell *matCellDef="let element"> {{element.displayPrice}} </td>
-  </ng-container>
+  <div class="property-img">
+    <img [src]="property.mainMapImageSrc">
+  </div>
 
-  <ng-container matColumnDef="displayAddress">
-    <th mat-header-cell *matHeaderCellDef> Display Address </th>
-    <td mat-cell *matCellDef="let element"> {{element.displayAddress}} </td>
-  </ng-container>
+  <div class="property-attributes">
+    <p>{{property.displayAddress}}</p>
+    <p>{{property.bedrooms}}</p>
+    <p>{{property.displayPrice}}</p>
+  </div>
 
-  <ng-container matColumnDef="bedrooms">
-    <th mat-header-cell *matHeaderCellDef> Bedrooms </th>
-    <td mat-cell *matCellDef="let element"> {{element.bedrooms}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="firstVisibleDate">
-    <th mat-header-cell *matHeaderCellDef> First Visible date </th>
-    <td mat-cell *matCellDef="let element"> {{element.firstVisibleDate | date: 'dd/MM/yyyy' }} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="offMarketDate">
-    <th mat-header-cell *matHeaderCellDef> Off Market Date </th>
-    <td mat-cell *matCellDef="let element"> {{element.offMarketDate | date: 'dd/MM/yyyy' }} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="daysOnMarket" >
-    <th mat-header-cell *matHeaderCellDef mat-sort-header> Days On Market </th>
-    <td mat-cell *matCellDef="let element"> {{element.daysOnMarket}} </td>
-  </ng-container>
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+</div>

@@ -1,3 +1,13 @@
 table {
   width: 100%;
 }
+
+.property-details {
+  margin: 0;
+  display: flex;
+}
+
+p {
+  border: 1px solid red;
+}
+

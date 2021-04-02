@@ -1,3 +1,15 @@
 table {
   width: 60%;
 }
+
+.searchHeader {
+  display: flex;
+}
+
+.searchResultsSummary {
+  flex: 2;
+}
+
+.searchResultSort {
+  flex: 1;
+}

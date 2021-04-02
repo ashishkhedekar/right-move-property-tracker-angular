@@ -5,6 +5,7 @@ import { environment } from '../../environments/environment';
 export interface LocationInterface {
   locationId: string;
   locationName: string;
+  description: string;
   numberOfLetProperties: number;
   numberOfSoldProperties: number;
 }
@@ -30,7 +31,7 @@ export class LocationsService {
   }
 
   loadLocationMarketDetails(locationId) {
-    return this.http.get<Array<LocationDetailsInterface>>(`${environment.backendEndpoint}/market-details?locationId=${locationId}`);
+    return this.http.get<Array<LocationDetailsInterface>>(`${environment.backendEndpoint}/market-details?locationId=${locationId}&numberOfDays=200`);
   }
 
 }
