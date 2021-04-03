@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid #e6e6e6;
+
 }
 
 .search-criteria {
@@ -31,26 +32,17 @@
 }
 
 select {
-  padding: 5px;
-  background-color: #bfbfbf;
+  padding-right: 20px;
+  /*background-color: #bfbfbf;*/
   color: #fff;
   /*position: absolute;*/
   margin-left: 10px;
   /*width: 33%;*/
   border: 0;
+  -webkit-appearance:none;
+  background: url(../../../assets/chevron-down-solid.svg) no-repeat right #bfbfbf;
+  background-size: 15px;
 }
-
-/*#numberOfDays {*/
-/*  top: 25px;*/
-/*}*/
-
-/*#minBedrooms {*/
-/*  top: 75px;*/
-/*}*/
-
-/*#maxBedrooms {*/
-/*  top: 125px;*/
-/*}*/
 
 select:focus {
   outline: none;

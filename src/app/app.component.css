@@ -1,7 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 header {
   width: 100%;
   padding: 15px;
-  /*background: linear-gradient( #808080, #f2f2f2);*/
   background-image: linear-gradient(#808080, #bfbfbf) ;
   border-bottom: 1px solid #e6e6e6;
 }
