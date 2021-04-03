@@ -1,0 +1,17 @@
+header {
+  width: 100%;
+  padding: 15px;
+  /*background: linear-gradient( #808080, #f2f2f2);*/
+  background-image: linear-gradient(#808080, #bfbfbf) ;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Muli', sans-serif ;
+  font-size: 25px;
+  color: #fff;
+  padding: 20px;
+}
+
+

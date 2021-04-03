@@ -1,5 +1,40 @@
-<div class="property-cards-container">
 
+<div class="properties-list-container">
+  <div class="search-criteria">
+    <select name="numberOfDays" id="numberOfDays">
+      <option value="0">Sold in last days</option>
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="20">20</option>
+      <option value="30">30</option>
+    </select>
+
+    <div class="line">
+    </div>
+
+    <select name="minBedrooms" id="minBedrooms">
+      <option value="0">Min Bedrooms</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+
+    <p class="text">to</p>
+
+    <select name="maxBedrooms" id="maxBedrooms">
+      <option value="0">Max Bedrooms</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+
+  </div>
+
+
+
+  <div class="property-cards-container">
     <div *ngFor="let property of properties" class="property-card">
       <div class="image-container">
         <img [src]="property.mainMapImageSrc">
@@ -11,7 +46,11 @@
         <p>Price: {{property.displayPrice}}</p>
       </div>
     </div>
+  </div>
+
+
 </div>
+
 
 
 
