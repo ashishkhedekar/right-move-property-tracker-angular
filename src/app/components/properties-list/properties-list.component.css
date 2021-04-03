@@ -8,33 +8,38 @@
 }
 
 .property-card {
+
   border: 1px solid black;
   margin: 10px;
   position: relative;
   height: 325px;
-  width: 15%;
+  width: 300px;
   border-radius: 10px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   background-color: #f2f2f2;
   box-sizing: border-box;
   cursor: pointer;
+  transition: 0.5s ease;
 }
 
 .image-container {
+  /*border: 1px solid red;*/
   position: absolute;
-
+  text-align: center;
+  height: 50%;
 }
 
 .image-container img {
+  /*border: 1px solid black;*/
   width: 90%;
+  height: 90%;
   padding: 10px;
-
 }
 
 .description-container {
   position: absolute;
-  top: 175px;
+  top: 190px;
+  left: 6px;
   margin: 10px;
   width: 100%;
-
 }

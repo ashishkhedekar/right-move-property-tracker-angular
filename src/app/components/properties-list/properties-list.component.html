@@ -1,7 +1,9 @@
 <div class="property-cards-container">
+
     <div *ngFor="let property of properties" class="property-card">
       <div class="image-container">
         <img [src]="property.mainMapImageSrc">
+
       </div>
       <div class="description-container">
         <p>{{property.displayAddress}}</p>

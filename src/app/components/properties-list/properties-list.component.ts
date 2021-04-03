@@ -30,9 +30,17 @@ export class PropertiesListComponent implements OnInit, AfterViewInit {
         if (locationDetail.channel === this.channel)
         {
           this.properties.push(locationDetail);
+          if (locationDetail.mainMapImageSrc === null || locationDetail.mainMapImageSrc === '')
+          {
+            locationDetail.mainMapImageSrc = 'https://specialistbuildingsupplies.co.uk/wp-content/uploads/2021/02/image-coming-soon-placeholder.png';
+          }
         }
       });
       this.propertiesDataSource.data = this.properties;
+
+
+
+
 
     });
   }
