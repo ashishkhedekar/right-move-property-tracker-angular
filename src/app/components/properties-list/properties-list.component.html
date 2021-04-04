@@ -2,45 +2,79 @@
 <div class="properties-list-container">
 
   <div class="search-criteria">
-    <select name="numberOfDays" id="numberOfDays">
-      <option value="0">Sold in last days <i class="fas fa-chevron-down"></i></option>
-      <option value="5">5</option>
-      <option value="10">10</option>
-      <option value="20">20</option>
-      <option value="30">30</option>
-    </select>
+    <div class="filter-options">
+      <select name="numberOfDays" id="numberOfDays">
+        <option value="0">Sold in last days <i class="fas fa-chevron-down"></i></option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+      </select>
 
-    <div class="line">
+      <div class="line">
+      </div>
+
+      <select name="minBedrooms" id="minBedrooms">
+        <option value="0">Min Bedrooms</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+
+      <p class="text">to</p>
+
+      <select name="maxBedrooms" id="maxBedrooms">
+        <option value="0">Max Bedrooms</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+
+      <div class="line">
+      </div>
+
+      <select name="minPrice" id="minPrice">
+        <option value="0">Min Price</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+
+      <p class="text">to</p>
+
+      <select name="maxPrice" id="maxPrice">
+        <option value="0">Max Price</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+
+
     </div>
 
-    <select name="minBedrooms" id="minBedrooms">
-      <option value="0">Min Bedrooms</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-
-    <p class="text">to</p>
-
-    <select name="maxBedrooms" id="maxBedrooms">
-      <option value="0">Max Bedrooms</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-
+    <div class="choose-property-types">
+      <input type="radio" id="radio-one" name="switch-one" value="BUY" checked (change)="handleChange('BUY')" />
+      <label for="radio-one">For sale</label>
+      <input type="radio" id="radio-two" name="switch-one" value="RENT" (change)="handleChange('RENT')" />
+      <label for="radio-two">For rent</label>
+    </div>
   </div>
-
-
 
   <div class="property-cards-container">
     <div *ngFor="let property of properties" class="property-card">
+      <div class="icon-container">
+        <i class="fas fa-expand-alt"></i>
+      </div>
+
       <div class="image-container">
         <img [src]="property.mainMapImageSrc">
 
       </div>
+
       <div class="description-container">
         <p>{{property.displayAddress}}</p>
         <p>Bedrooms: {{property.bedrooms}}</p>
@@ -48,8 +82,6 @@
       </div>
     </div>
   </div>
-
-
 </div>
 
 
