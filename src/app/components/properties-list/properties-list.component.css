@@ -132,11 +132,9 @@ select:focus {
 }
 
 .icon-container {
-
   width: 100%;
   position: relative;
   height: 10px;
-
 }
 .icon-container i {
   position: absolute;
@@ -168,4 +166,17 @@ select:focus {
   left: 6px;
   margin: 10px;
   width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  .filter-options {
+    display: none;
+  }
+
+  .choose-property-types {
+    top: 0;
+    left: 0;
+    margin-left: 10px;
+  }
+
 }

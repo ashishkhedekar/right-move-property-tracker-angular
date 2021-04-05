@@ -9,6 +9,8 @@ header {
   padding: 10px 0;
   background-image: linear-gradient(#808080, #bfbfbf) ;
   border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  align-items: center;
 }
 
 a {
@@ -19,4 +21,22 @@ a {
   padding: 20px;
 }
 
+.burger-menu-container {
+  /*border: 1px solid black;*/
+  margin-left: 10px;
+  display: none;
+}
 
+.burger-menu {
+  /*border: 1px solid red;*/
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .burger-menu-container {
+    display: block;
+  }
+}
