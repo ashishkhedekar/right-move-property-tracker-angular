@@ -43,10 +43,75 @@ a {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: #bfbfbf; /** todo change colour **/
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+}
+
+label {
+  font-family: 'Muli', sans-serif;
+  color: #fff;
+  font-size: 18px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.filter-options {
+  /*border: 1px solid;*/
+  /*height: 100vh;*/
+  display: flex;
+  flex-direction: column;
+  flex:1;
+  margin-bottom: 10px;
+}
+
+select  {
+  font-size: 20px;
+  background-color: #bfbfbf;
+  color: #fff;
+  /*position: absolute;*/
+  margin-left: 10px;
+  margin-right: 10px;
+  /*width: 33%;*/
+  -webkit-appearance:none;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  padding: 8px 20px;
+}
+
+.soldInLast {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bedrooms, .price-range {
+  display: flex;
+  flex-direction: column;
+}
+
+.bedroom-selects, .price-range-selects {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.bedroom-selects, .price-range-selects > select {
+  width: 50%;
+}
+
+select:focus {
+  outline: none;
+}
+
+.bedrooms {
+  display: flex;
+}
+
+.select-bar-expanded {
+  width: 400px;
 }
 
 .sidenav .closebtn {
@@ -55,6 +120,31 @@ a {
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+}
+
+.btn-container {
+  border-top: 1px dotted ;
+  display: flex;
+  justify-content: space-between;
+  /*position: fixed;*/
+  /*width: 100%;*/
+  /*bottom: 0;*/
+  width: 400px;
+  padding: 10px 0;
+  margin-top: auto;
+
+}
+
+.btn {
+  background-color: #4db8ff;
+  color: #fff;
+  width: 30%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin: 0 25px;
+
 }
 
 @media screen and (max-height: 450px) {
