@@ -1,3 +1,7 @@
+div {
+  --theme-main-colour: #4db8ff;
+}
+
 .properties-list-container {
   display: flex;
   flex-direction: column;
@@ -6,9 +10,35 @@
   margin: 0;
 }
 
-.filter-options {
+.big-screen-filter-options {
   display: flex;
 }
+
+.property-cards-burger-menu {
+  position: relative;
+}
+
+
+.small-screen-filter-options {
+  border: 1px solid #e6e6e6;
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  flex:1;
+  margin-bottom: 10px;
+  width: 0;
+  display: none;
+  z-index: 1;
+  top: 95px;
+  background-image: linear-gradient( #bfbfbf, #e6e6e6) ;
+  position: fixed;
+}
+
+.select-bar-expanded {
+  width: 400px;
+  display: block;
+  /*height: 100%;*/
+}
+
 
 .choose-property-types {
   position: absolute;
@@ -35,7 +65,6 @@
   text-align: center;
   padding: 8px 16px;
   margin-right: -1px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
   transition: all 0.1s ease-in-out;
 }
@@ -45,7 +74,7 @@
 }
 
 .choose-property-types input:checked + label {
-  background-color: #a6a6a6;
+  background-color: var(--theme-main-colour);
   box-shadow: none;
   color: #f2f2f2;
 }
@@ -168,15 +197,152 @@ select:focus {
   width: 100%;
 }
 
+.burger-menu-super-container {
+  display: flex;
+
+}
+
+.burger-menu-container {
+  /*border: 1px solid black;*/
+  margin-left: 10px;
+  display: none;
+  cursor: pointer;
+  margin-top: 7px;
+}
+
+.burger-menu {
+  /*border: 1px solid red;*/
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+}
+
+.small-screen-filter-options select  {
+  font-size: 16px;
+  background-color: #bfbfbf;
+  color: #fff;
+  /*position: absolute;*/
+  margin-left: 10px;
+  margin-right: 10px;
+  /*width: 33%;*/
+  -webkit-appearance:none;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #e6e6e6;
+  padding: 8px 20px;
+}
+
+.small-screen-filter-options .soldInLast {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.small-screen-filter-options > .bedrooms, .price-range {
+  display: flex;
+  flex-direction: column;
+}
+
+.small-screen-filter-options  > .bedroom-selects, .price-range-selects {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.small-screen-filter-options > .bedroom-selects, .price-range-selects > select {
+  width: 50%;
+}
+
+.small-screen-filter-options  select:focus {
+  outline: none;
+}
+
+.small-screen-filter-options  .bedrooms {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+/*.select-bar-expanded {*/
+/*  width: 400px;*/
+/*}*/
+
+.sidenav {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.close-btn-div {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.closebtn {
+  text-decoration: none;
+  font-size: 30px;
+  color: #ffffff;
+  margin: 5px 7px;
+}
+
+.btn-container {
+  border-top: 1px dotted ;
+  display: flex;
+  justify-content: space-between;
+  /*position: fixed;*/
+  /*width: 100%;*/
+  /*bottom: 0;*/
+  width: 400px;
+  padding: 10px 0;
+  margin-top: auto;
+
+}
+
+.btn {
+  background-color: var(--theme-main-colour);
+  color: #fff;
+  width: 30%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin: 0 25px;
+}
+
+.btn:focus {
+  outline: none;
+
+}
+
+.btn:active {
+  transform: scale(0.94);
+}
+
+.small-screen-filter-options label {
+  font-family: 'Muli', sans-serif;
+  color: #fff;
+  font-size: 16px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
 @media only screen and (max-width: 800px) {
-  .filter-options {
+  .big-screen-filter-options {
     display: none;
   }
 
   .choose-property-types {
-    top: 0;
-    left: 0;
+    /*top: 0;*/
+    /*left: 0;*/
     margin-left: 10px;
+  }
+
+  .burger-menu-container {
+    display: block;
+
   }
 
 }

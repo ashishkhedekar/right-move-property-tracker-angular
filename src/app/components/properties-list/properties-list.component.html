@@ -1,8 +1,7 @@
-
 <div class="properties-list-container">
 
   <div class="search-criteria">
-    <div class="filter-options">
+    <div class="big-screen-filter-options">
       <select name="numberOfDays" id="numberOfDays">
         <option value="0">Sold in last days <i class="fas fa-chevron-down"></i></option>
         <option value="5">5</option>
@@ -52,36 +51,99 @@
         <option value="3">3</option>
         <option value="4">4</option>
       </select>
-
-
     </div>
-
+    <div class="burger-menu-super-container">
+      <div class="burger-menu-container" (click)="toggle()">
+        <div class="burger-menu"></div>
+        <div class="burger-menu"></div>
+        <div class="burger-menu"></div>
+      </div>
+    </div>
     <div class="choose-property-types">
-      <input type="radio" id="radio-one" name="switch-one" value="BUY" checked (change)="handleChange('BUY')" />
+      <input type="radio" id="radio-one" name="switch-one" value="BUY" checked (change)="handleChange('BUY')"/>
       <label for="radio-one">For sale</label>
-      <input type="radio" id="radio-two" name="switch-one" value="RENT" (change)="handleChange('RENT')" />
+      <input type="radio" id="radio-two" name="switch-one" value="RENT" (change)="handleChange('RENT')"/>
       <label for="radio-two">For rent</label>
     </div>
   </div>
 
-  <div class="property-cards-container">
-    <div *ngFor="let property of properties" class="property-card">
-      <div class="icon-container">
-        <i class="fas fa-expand-alt"></i>
+  <div class="property-cards-burger-menu">
+    <div [ngClass]="{ 'small-screen-filter-options' : true, 'select-bar-expanded' : expand}">
+      <div class="close-btn-div">
+        <a href="javascript:void(0)" class="closebtn" (click)="toggle()">&times;</a>
       </div>
-
-      <div class="image-container">
-        <img [src]="property.mainMapImageSrc">
-
+      <div class="soldInLast">
+        <label>Sold in last:</label>
+        <select name="numberOfDays" id="smallScreenNumberOfDays">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+        </select>
       </div>
+      <div class="bedrooms">
+        <label>Bedrooms: </label>
+        <div class="bedroom-selects">
+          <select name="minBedrooms" id="smallScreenMinBedrooms">
+            <option value="0">Min Bedrooms</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+          <select name="maxBedrooms" id="smallScreenMaxBedrooms">
+            <option value="0">Max Bedrooms</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+      </div>
+      <div class="price-range">
+        <label>Price Range:</label>
+        <div class="price-range-selects">
+          <select name="minPrice" id="smallScreenMinPrice">
+            <option value="0">Min Price</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+          <select name="maxPrice" id="smallScreenMaxPrice">
+            <option value="0">Max Price</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+      </div>
+      <div class="btn-container">
+        <button class="btn" id="cancelBtn" (click)="toggle()">Cancel</button>
+        <button class="btn" id="doneBtn">Done</button>
+      </div>
+    </div>
+    <div class="property-cards-container">
+      <div *ngFor="let property of properties" class="property-card">
+        <div class="icon-container">
+          <i class="fas fa-expand-alt"></i>
+        </div>
 
-      <div class="description-container">
-        <p>{{property.displayAddress}}</p>
-        <p>Bedrooms: {{property.bedrooms}}</p>
-        <p>Price: {{property.displayPrice}}</p>
+        <div class="image-container">
+          <img [src]="property.mainMapImageSrc">
+
+        </div>
+
+        <div class="description-container">
+          <p>{{property.displayAddress}}</p>
+          <p>Bedrooms: {{property.bedrooms}}</p>
+          <p>Price: {{property.displayPrice}}</p>
+        </div>
       </div>
     </div>
   </div>
+
 </div>
 
 

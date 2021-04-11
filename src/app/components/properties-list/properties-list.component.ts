@@ -12,10 +12,18 @@ export class PropertiesListComponent implements OnInit, AfterViewInit {
 
   @Input() locationId: string;
   @Input() channel: string;
+  public expand = false;
   properties: LocationDetailsInterface[] = [];
   @ViewChild(MatSort) sort: MatSort;
   offMarketInDays = [];
   constructor(private locationsService: LocationsService) { }
+
+  toggle()
+  {
+    console.log('Menu to be showed before' + this.expand);
+    this.expand = !this.expand;
+    console.log('Menu to be showed after' + this.expand);
+  }
 
   ngAfterViewInit() {
     this.offMarketInDays = ['1', '2'];

@@ -21,21 +21,6 @@ a {
   padding: 20px;
 }
 
-.burger-menu-container {
-  /*border: 1px solid black;*/
-  margin-left: 10px;
-  display: none;
-  cursor: pointer;
-}
-
-.burger-menu {
-  /*border: 1px solid red;*/
-  width: 30px;
-  height: 3px;
-  background-color: #fff;
-  margin: 6px 0;
-}
-
 .sidenav {
   height: 100%;
   width: 0;
@@ -49,22 +34,22 @@ a {
   padding-top: 60px;
 }
 
-label {
-  font-family: 'Muli', sans-serif;
-  color: #fff;
-  font-size: 18px;
-  margin-left: 10px;
-  margin-bottom: 10px;
-}
+/*label {*/
+/*  font-family: 'Muli', sans-serif;*/
+/*  color: #fff;*/
+/*  font-size: 18px;*/
+/*  margin-left: 10px;*/
+/*  margin-bottom: 10px;*/
+/*}*/
 
-.filter-options {
-  /*border: 1px solid;*/
-  /*height: 100vh;*/
-  display: flex;
-  flex-direction: column;
-  flex:1;
-  margin-bottom: 10px;
-}
+/*.small-screen-filter-options {*/
+/*  !*border: 1px solid;*!*/
+/*  !*height: 100vh;*!*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  flex:1;*/
+/*  margin-bottom: 10px;*/
+/*}*/
 
 select  {
   font-size: 20px;
@@ -110,9 +95,9 @@ select:focus {
   display: flex;
 }
 
-.select-bar-expanded {
-  width: 400px;
-}
+/*.select-bar-expanded {*/
+/*  width: 400px;*/
+/*}*/
 
 .sidenav .closebtn {
   position: absolute;

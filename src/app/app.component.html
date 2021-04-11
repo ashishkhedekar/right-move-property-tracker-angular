@@ -1,70 +1,8 @@
 <div class="application">
   <header>
-    <div class="burger-menu-container" (click)="toggle()">
-      <div class="burger-menu"></div>
-      <div class="burger-menu"></div>
-      <div class="burger-menu"></div>
-    </div>
     <span><a [routerLink]="['']">Properties Tracker</a></span>
   </header>
   <div class="container">
-    <div id="mySidenav" [ngClass]="{ 'sidenav' : true, 'select-bar-expanded' : expand}">
-<!--    <div id="mySidenav" class="sidenav">-->
-      <a href="javascript:void(0)" class="closebtn" (click)="toggle()">&times;</a>
-      <div class="filter-options">
-        <div class="soldInLast">
-          <label>Sold in last:</label>
-          <select name="numberOfDays" id="numberOfDays">
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="30">30</option>
-          </select>
-        </div>
-        <div class="bedrooms">
-          <label>Bedrooms: </label>
-          <div class="bedroom-selects">
-            <select name="minBedrooms" id="minBedrooms">
-              <option value="0">Min Bedrooms</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
-            <select name="maxBedrooms" id="maxBedrooms">
-              <option value="0">Max Bedrooms</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
-          </div>
-        </div>
-        <div class="price-range">
-          <label>Price Range:</label>
-          <div class="price-range-selects">
-            <select name="minPrice" id="minPrice">
-              <option value="0">Min Price</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
-            <select name="maxPrice" id="maxPrice">
-              <option value="0">Max Price</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
-          </div>
-        </div>
-        <div class="btn-container">
-          <button class="btn" id="cancelBtn">Cancel</button>
-          <button class="btn" id="doneBtn">Done</button>
-        </div>
-      </div>
-    </div>
     <router-outlet></router-outlet>
   </div>
 </div>
